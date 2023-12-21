@@ -21,15 +21,7 @@ pipeline {
                 echo "BUILD DATA UPLOADED"
             }
         }
-        stage('To Check Installed Version Via JenkinsFile') {
-            steps {
-                sh '''
-                  ansible --version
-                  ansible-playbook --version
-                  ansible-galaxy --version
-                  '''
-            }
-        }
+      
         
         stage("Ended") {
             steps {
