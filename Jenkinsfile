@@ -1,32 +1,24 @@
 pipeline {
-    agent any
+    agent any 
+
     stages {
-        stage("hello") {
-            steps {
-                echo "welcome to Jenkins pipeline"
-            }
-        }
-        stage("TEST BUILD") {
-            steps {
-                echo "BUILD SUCCESS"
-            }
-        }
-        stage("DEPLOY BUILD") {
-            steps {
-                echo "DEPLOY SUCCESS"
-            }
-        }
-        stage("UPLOAD BUILD DATA") {
-            steps {
-                echo "BUILD DATA UPLOADED"
-            }
-        }
-      
-        
-        stage("Ended") {
-            steps {
-                echo "BUILD DATA UPLOADED"
-            }
-        }
+        stage ("sleep1") {
+		    steps {
+			        sleep 10
+					    sh "ls"
+					}
+				}
+				
+	    stage ("sleep2") {
+		    steps {
+			        sleep 10
+					}
+				}
+		
+        stage ("sleep3") {
+		    steps {
+			        sleep 10
+					}
+				}
+			}
     }
-}
